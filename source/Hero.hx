@@ -89,6 +89,17 @@ class Hero extends FlxSprite
 	{
 		updateMovement();
 
+		hue = this.x + this.y;
+		if (hue > 360)
+		{
+			hue -= 360;
+		}
+		if (hue < 0)
+		{
+			hue += 360;
+		}
+		this.color = FlxColor.fromHSB(Std.int(hue), 1, 1);
+
 		super.update(elapsed);
 	}
 }

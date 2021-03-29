@@ -22,18 +22,6 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float)
 	{
-		hue = hero.x + hero.y;
-		if (hue > 360)
-		{
-			hue -= 360;
-		}
-		if (hue < 0)
-		{
-			hue += 360;
-		}
-		var color = FlxColor.fromHSB(Std.int(hue), 1, 1);
-		hero.color = color;
-
 		super.update(elapsed);
 	}
 }
